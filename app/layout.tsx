@@ -6,8 +6,8 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Name | Full-Stack Developer",
-  description: "My Portfolio",
+  title: "Ali Haider | Full-Stack & AI Developer",
+  description: "Portfolio of Ali Haider, specializing in Next.js, Node.js, and AI/LLM integration.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${inter.className} bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased transition-colors duration-300`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

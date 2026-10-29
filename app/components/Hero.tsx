@@ -88,7 +88,7 @@ export default function Hero() {
 
             <div className="flex items-center gap-2 md:gap-3 w-full sm:w-auto">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/qh8773127-star"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 sm:flex-none flex items-center justify-center p-2 md:p-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all"
@@ -96,7 +96,7 @@ export default function Hero() {
                 <GithubIcon size={18} className="md:w-5 md:h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/ali-haider-17015734a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 sm:flex-none flex items-center justify-center p-2 md:p-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all"

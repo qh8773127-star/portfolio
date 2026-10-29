@@ -1,4 +1,5 @@
-import { ExternalLink, FolderGit2 } from "lucide-react";
+import Image from "next/image";
+import { ExternalLink, Maximize } from "lucide-react"; // FolderGit2 hata kar Maximize add kiya
 
 function GithubIcon({
   size = 18,
@@ -30,29 +31,41 @@ const projectsData = [
   {
     title: "CareerSyncAi",
     description:
-      "A production-ready chatbot that ingests PDF documents, chunks them, and uses vector search for accurate, context-aware answers using LLMs.",
+      "An AI-powered career assistant that uses RAG architecture and LLMs to provide personalized job recommendations and resume analysis.",
+    image: "/career_ai.png",
     tech: [
-      "React",
       "Next.js",
+      "React",
       "TypeScript",
       "PostgreSQL",
       "Prisma",
-      "redis",
-      "tailwind CSS",
-      "LLM",
-      "RAG"
+      "Redis",
+      "Tailwind CSS",
+      "Zod",
+      "OpenAI",
+      "RAG",
     ],
     liveUrl: "https://career-sync-ai-dun.vercel.app",
-    githubUrl: "https://github.com/yourusername/rag-chatbot",
+    githubUrl: "https://github.com/qh8773127-star/CareerSyncAi",
   },
   {
-    title: "Team task Manager",
+    title: "Team Task Manager",
     description:
-      "A scalable SaaS architecture with role-based access control, subscription billing, and secure authentication.",
-    tech: ["Node.js", "Express.js", "MongoDB", "Passport.js", "Redis"],
+      "A secure SaaS platform to create teams, assign tasks, and track progress. Built with Express Session, Passport.js, and deployed on GCP.",
+    image: "/team_manager.png",
+    tech: [
+      "React.js",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Passport.js",
+      "Tailwind CSS",
+      "JavaScript",
+    ],
     liveUrl: "https://team-task-manager-ui-7xfl.onrender.com",
-    githubUrl: "https://github.com/yourusername/saas-app",
-  }
+    githubUrl: "https://github.com/qh8773127-star/team-task-manager",
+  },
 ];
 
 export default function Projects() {
@@ -78,17 +91,45 @@ export default function Projects() {
               key={index}
               className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
             >
-              <div className="h-48 bg-gray-100 dark:bg-gray-700/50 border-b border-gray-200 dark:border-gray-700 flex items-center justify-center relative group">
-                <FolderGit2
-                  size={40}
-                  className="text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform duration-300"
-                />
+              {/* 
+                Image Container with Hover Effect 
+                aspect-video use kiya hai taake image browser window jaisi 16:9 lage
+              */}
+              <div className="aspect-video bg-gray-100 dark:bg-gray-700/50 border-b border-gray-200 dark:border-gray-700 relative overflow-hidden group cursor-pointer">
+                
+                {/* Image ko <a> tag mein wrap kiya taake click par full screen khule */}
+                <a 
+                  href={project.image} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full h-full relative"
+                  title="Click to view full screenshot"
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={800}
+                    height={450}
+                    loading="eager"
+                    // object-top lagaya hai taake screenshot ka upar wala hissa (navbar etc) dikhe
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  {/* Dark Overlay with Zoom Icon (Sirf Laptop par hover se dikhega) */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+                    <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full text-white shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                      <Maximize size={28} />
+                    </div>
+                  </div>
+                </a>
+
               </div>
 
               <div className="p-6 flex flex-col grow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {project.title}
                 </h3>
+
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 grow leading-relaxed">
                   {project.description}
                 </p>
