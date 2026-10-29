@@ -31,18 +31,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           
           <Link href="/" className="text-xl font-bold text-blue-600 z-50">
-            YourName.dev
+           ALI HAIDER
           </Link>
-          
-          {/* Desktop Menu & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                 {link.name}
               </a>
             ))}
-            
-            {/* Theme Toggle Button */}
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -52,8 +48,6 @@ export default function Navbar() {
               </button>
             )}
           </div>
-
-          {/* Mobile Right Side (Theme + Hamburger) */}
           <div className="md:hidden flex items-center gap-4 z-50">
             {mounted && (
               <button
@@ -71,7 +65,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 absolute top-16 left-0 w-full shadow-lg transition-colors duration-300">
           <div className="flex flex-col px-4 pt-2 pb-4 space-y-2">

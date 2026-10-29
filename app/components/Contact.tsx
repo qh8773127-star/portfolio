@@ -28,7 +28,7 @@ export default function Contact() {
 
       if (res.ok) {
         setIsSuccess(true);
-        (e.target as HTMLFormElement).reset(); // Form clear kar dein
+        (e.target as HTMLFormElement).reset();
       }
     } catch (error) {
       console.error("Failed to send message", error);
@@ -49,8 +49,6 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          
-          {/* Contact Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">Let&apos;s Talk</h3>
             <p className="text-gray-600 dark:text-gray-400">
@@ -63,7 +61,7 @@ export default function Contact() {
                 <div className="p-3 bg-blue-50 dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg"><Mail size={24} /></div>
                 <div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                  <a href="mailto:your.email@example.com" className="font-medium hover:text-blue-600 dark:hover:text-blue-400">your.email@example.com</a>
+                  <a href="mailto:your.email@example.com" className="font-medium hover:text-blue-600 dark:hover:text-blue-400">ali.haider.qh@gmail.com</a>
                 </div>
               </div>
               
@@ -77,7 +75,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 md:p-8 rounded-2xl border border-gray-100 dark:border-gray-700 transition-colors duration-300">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
@@ -99,8 +96,6 @@ export default function Contact() {
                 "Send Message"
               )}
             </button>
-
-            {/* Success Message */}
             {isSuccess && (
               <div className="flex items-center gap-2 text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30 p-3 rounded-lg mt-4 text-sm font-medium">
                 <CheckCircle2 size={18} />
