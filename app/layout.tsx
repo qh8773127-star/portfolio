@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Ali Haider Portfolio",
     images: [
       {
-        url: "https://portfolio-delta-blush-7k4xnw80xa.vercel.app/og-image.jpg", 
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Ali Haider Portfolio",
