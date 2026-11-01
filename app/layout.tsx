@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ali Haider | Full-Stack & AI Developer",
     description: "I build production-ready SaaS applications and integrate AI/LLMs.",
-    url: "https://yourwebsite.com",
+    url: "https://portfolio-delta-blush-7k4xnw80xa.vercel.app/",
     siteName: "Ali Haider Portfolio",
     images: [
       {
