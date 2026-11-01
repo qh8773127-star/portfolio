@@ -6,8 +6,10 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-delta-blush-7k4xnw80xa.vercel.app"), 
+  
   title: "Ali Haider | Full-Stack & AI Developer",
-  description: "Portfolio of Ali Haider, specializing in Next.js, Node.js, and AI/LLM integration. Available for freelance and full-time opportunities.",
+  description: "Portfolio of Ali Haider, specializing in Next.js, Node.js, and AI/LLM integration.",
   keywords: ["Full Stack Developer", "Next.js Developer", "React Developer", "AI Developer", "Pakistan"],
   authors: [{ name: "Ali Haider" }],
 
@@ -17,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ali Haider | Full-Stack & AI Developer",
     description: "I build production-ready SaaS applications and integrate AI/LLMs.",
-    url: "https://portfolio-delta-blush-7k4xnw80xa.vercel.app/",
+    url: "/",
     siteName: "Ali Haider Portfolio",
     images: [
       {
-        url: "/og-image.jpg", 
+        url: "https://portfolio-delta-blush-7k4xnw80xa.vercel.app/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "Ali Haider Portfolio",
