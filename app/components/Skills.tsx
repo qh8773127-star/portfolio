@@ -24,6 +24,7 @@ const skillCategories = [
       "RESTful APIs",
       "Passport.js",
       "Prisma ORM",
+      "zod"
     ],
   },
   {
@@ -44,18 +45,21 @@ const skillCategories = [
     title: "Architecture & DevOps",
     icon: <Cloud className="text-sky-500" size={24} />,
     skills: [
-      "SaaS Architecture",
       "Systems Design",
       "CI/CD",
       "Linux",
       "GitHub",
-      "Production Debugging",
     ],
   },
   {
     title: "Languages & Concepts",
     icon: <Terminal className="text-gray-700 dark:text-gray-300" size={24} />,
     skills: ["C++", "OOP", "Full-Stack Development", "Communication"],
+  },
+  {
+    title: "Deployment",
+    icon: <Terminal className="text-gray-700 dark:text-gray-300" size={24} />,
+    skills: ["vercel","render"]
   },
 ];
 
