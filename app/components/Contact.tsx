@@ -3,6 +3,15 @@
 import { useState } from "react";
 import { Mail, MapPin, CheckCircle2, Loader2 } from "lucide-react";
 
+function WhatsappIcon({ size = 24, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+      <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+    </svg>
+  );
+}
+
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -69,14 +78,13 @@ export default function Contact() {
             </p>
 
             <div className="space-y-4 pt-4">
+              {/* Email */}
               <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
                 <div className="p-3 bg-blue-50 dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Email
-                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
                   <a
                     href="mailto:ali.haider.qh@gmail.com"
                     className="font-medium hover:text-blue-600 dark:hover:text-blue-400"
@@ -87,18 +95,34 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
+                <div className="p-3 bg-green-50 dark:bg-gray-800 text-green-600 dark:text-green-400 rounded-lg">
+                  <WhatsappIcon size={24} />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">WhatsApp</p>
+                
+                  <a
+                    href="https://wa.me/923258092013" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium hover:text-green-600 dark:hover:text-green-400"
+                  >
+                    +92325-8092013
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
                 <div className="p-3 bg-blue-50 dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Location
-                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
                   <p className="font-medium">Sheikhupura, Pakistan</p>
                 </div>
               </div>
             </div>
           </div>
+
           <form
             onSubmit={handleSubmit}
             className="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 md:p-8 rounded-2xl border border-gray-100 dark:border-gray-700 transition-colors duration-300"
