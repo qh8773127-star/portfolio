@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import RegisterSW from "./components/RegisterSW";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-delta-blush-7k4xnw80xa.vercel.app"),
+  metadataBase: new URL("https://ali-haider-dev.vercel.app"),
 
   title: {
     default: "Ali Haider | Full-Stack & AI Developer",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Ali Haider",
-      url: "https://portfolio-delta-blush-7k4xnw80xa.vercel.app",
+      url: "https://ali-haider-dev.vercel.app",
     },
   ],
   creator: "Ali Haider",
@@ -89,6 +90,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
+          <RegisterSW/>
         </ThemeProvider>
       </body>
     </html>
