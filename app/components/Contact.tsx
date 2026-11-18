@@ -107,7 +107,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="font-medium hover:text-green-600 dark:hover:text-green-400"
                   >
-                    +92325-8092013
+                    +923054331987
                   </a>
                 </div>
               </div>
