@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
+
 export default function Home() {
   return (
     <main className="bg-gray-50 min-h-screen">
